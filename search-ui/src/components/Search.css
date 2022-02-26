@@ -1,0 +1,17 @@
+.dropdown{
+    background-color: white;
+    box-shadow: #aaa 0 0 5px 0;
+    border-radius: 0 0 6px 6px;
+}
+.input{
+    border-color: #1890ff;
+}
+.word{
+    line-height: 30px;
+    cursor: pointer;
+    padding: 0 16px;
+}
+.word:hover{
+    background-color: #8cc8ff;
+    color: white;
+}

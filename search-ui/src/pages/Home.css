@@ -1,0 +1,38 @@
+.wrap {
+    height: 100vh;
+    overflow: auto;
+}
+
+.logo {
+    width: 400px;
+    vertical-align: center;
+    margin-bottom: 10px;
+}
+
+.search {
+    text-align: center;
+    margin: 25vh auto auto;
+}
+
+.result {
+    padding: 16px;
+}
+
+.control {
+    margin-top: 12px;
+}
+
+
+.item {
+    background-color: white;
+    border-radius: 8px;
+    margin: 16px 0;
+    border: 1px solid #eeeeee;
+    cursor: pointer;
+}
+
+.page {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}

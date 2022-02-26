@@ -1,0 +1,28 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: 
+      - master
+    paths:
+      - 'search-ui/**'
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Login to DockerHub Registry
+      run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password ${{ secrets.DOCKERHUB_PASSWORD }}
+
+    - name: Build the latest Docker image
+      working-directory: search-ui
+      run: docker build . --file Dockerfile --tag dyang912/search-ui:$(date -I)
+    
+    - name: Push the latest Docker image
+      working-directory: search-ui
+      run: docker push dyang912/search-ui:$(date -I)
